@@ -5,6 +5,7 @@
     <title>Vending Machine of DOOOOOooOOoooooOoooooMMMMMMMM!!!1!!!!1~!!!</title>
 
     <script src="VendingMachineJS.js"></script>
+
 </head>
 
 <body>
@@ -27,18 +28,68 @@
         </tr>
         <tr>
             <td><label>A</label></td>
+            <td><label id="a1"></label></td>
+            <td><label id="a2"></label></td>
+            <td><label id="a3"></label></td>
+            <td><label id="a4"></label></td>
+            <td><label id="a5"></label></td>
+            <td><label id="a6"></label></td>
+            <td><label id="a7"></label></td>
+            <td><label id="a8"></label></td>
+            <td><label id="a9"></label></td>
+            <td><label id="a0"></label></td>
         </tr>
         <tr>
             <td><label>B</label></td>
+            <td><label id="b1"></label></td>
+            <td><label id="b2"></label></td>
+            <td><label id="b3"></label></td>
+            <td><label id="b4"></label></td>
+            <td><label id="b5"></label></td>
+            <td><label id="b6"></label></td>
+            <td><label id="b7"></label></td>
+            <td><label id="b8"></label></td>
+            <td><label id="b9"></label></td>
+            <td><label id="b0"></label></td>
         </tr>
         <tr>
             <td><label>C</label></td>
+            <td><label id="c1"></label></td>
+            <td><label id="c2"></label></td>
+            <td><label id="c3"></label></td>
+            <td><label id="c4"></label></td>
+            <td><label id="c5"></label></td>
+            <td><label id="c6"></label></td>
+            <td><label id="c7"></label></td>
+            <td><label id="c8"></label></td>
+            <td><label id="c9"></label></td>
+            <td><label id="c0"></label></td>
         </tr>
         <tr>
             <td><label>D</label></td>
+            <td><label id="d1"></label></td>
+            <td><label id="d2"></label></td>
+            <td><label id="d3"></label></td>
+            <td><label id="d4"></label></td>
+            <td><label id="d5"></label></td>
+            <td><label id="d6"></label></td>
+            <td><label id="d7"></label></td>
+            <td><label id="d8"></label></td>
+            <td><label id="d9"></label></td>
+            <td><label id="d0"></label></td>
         </tr>
         <tr>
             <td><label>E</label></td>
+            <td><label id="e1"></label></td>
+            <td><label id="e2"></label></td>
+            <td><label id="e3"></label></td>
+            <td><label id="e4"></label></td>
+            <td><label id="e5"></label></td>
+            <td><label id="e6"></label></td>
+            <td><label id="e7"></label></td>
+            <td><label id="e8"></label></td>
+            <td><label id="e9"></label></td>
+            <td><label id="e0"></label></td>
         </tr>
         </table></td>
         <!-- keypad -->
@@ -97,9 +148,14 @@
                 <tr>
                     <td> <label align="center">Change</label></td>
                     <td> <p id="changeID" align="center">0</p></td>
+                    <td> <p id="changeP">pennies : 0</p></td>
+                    <td> <p id="changeN">nickels : 0</p></td>
+                    <td> <p id="changeD">dimes : 0</p></td>
+                    <td> <p id="changeQ">quarters : 0</p></td>
                 </tr>
         </table></td>
     </tr>
 </table>
+<script>initializeMachine();</script>
 </body>
 </html>
