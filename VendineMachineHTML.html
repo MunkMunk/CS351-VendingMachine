@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Vending Machine of DOOOOOooOOoooooOoooooMMMMMMMM!!!1!!!!1~!!!</title>
+
+    <script src="VendingMachineJS.js"></script>
+</head>
+
+<body>
+<table bgcolor="tan">
+    <tr>
+        <!-- vendor table -->
+        <td><table width="800" border="1"  align="center">
+        <tr>
+            <td><label><label> </label></td>
+            <td><label>1</label></td>
+            <td><label>2</label></td>
+            <td><label>3</label></td>
+            <td><label>4</label></td>
+            <td><label>5</label></td>
+            <td><label>6</label></td>
+            <td><label>7</label></td>
+            <td><label>8</label></td>
+            <td><label>9</label></td>
+            <td><label>0</label></td>
+        </tr>
+        <tr>
+            <td><label>A</label></td>
+        </tr>
+        <tr>
+            <td><label>B</label></td>
+        </tr>
+        <tr>
+            <td><label>C</label></td>
+        </tr>
+        <tr>
+            <td><label>D</label></td>
+        </tr>
+        <tr>
+            <td><label>E</label></td>
+        </tr>
+        </table></td>
+        <!-- keypad -->
+        <td><table border="1">
+            <!-- row 1  -->
+            <tr>
+                <td> <button width="10" onclick="setAlpha('A')"> A</button> </td>
+                <td> <button width="10" onclick="setNumeral('1')"> 1</button> </td>
+                <td> <button width="10" onclick="setNumeral('2')"> 2</button> </td>
+            </tr>
+            <!-- row 2  -->
+            <tr>
+                <td> <button onclick="setAlpha('B')"> B</button> </td>
+                <td> <button onclick="setNumeral('3')"> 3</button> </td>
+                <td> <button onclick="setNumeral('4')"> 4</button> </td>
+            </tr>
+            <!-- row 3  -->
+            <tr>
+                <td> <button onclick="setAlpha('C')"> C</button> </td>
+                <td> <button onclick="setNumeral('5')"> 5</button> </td>
+                <td> <button onclick="setNumeral('6')"> 6</button> </td>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+                <td> <button onclick="setAlpha('D')"> D</button> </td>
+                <td> <button onclick="setNumeral('7')"> 7</button> </td>
+                <td> <button onclick="setNumeral('8')"> 8</button> </td>
+            </tr>
+            <!-- row 5 -->
+            <tr>
+                <td> <button onclick="setAlpha('E')"> E</button> </td>
+                <td> <button onclick="setNumeral('9')"> 9</button> </td>
+                <td> <button onclick="setNumeral('0')"> 0</button> </td>
+            </tr>
+        </table></td>
+    </tr>
+    <tr>
+        <td><table width="400" border="1">
+            <tr>
+                <td><button onclick="addMoney('penny')"><img src="penny.jpg"></img></button></td>
+                <td><button onclick="addMoney('nickel')"><img src="nickel.jpg"></jpg></button></td>
+                <td><button onclick="addMoney('dime')"><img src="dime.jpg"></img></button></td>
+                <td><button onclick="addMoney('quarter')"><img src="quarter.jpg"></img></button></td>
+                <td><button onclick="addMoney('dollar')"><img src="dollar.jpg"></img></button></td>
+            </tr>
+        </table></td>
+        <td><table border="1">
+                <tr>
+                    <td> <button onclick="setAlpha('');setNumeral('')"> Clear</button></td>
+                    <td> <button onclick="vend()"> Vend</button></td> 
+                </tr>
+                <tr>
+                    <td><label align="center">MoneyInput</label></td>
+                    <td> <p id="moneyID" align="center">0</p></td>
+                </tr>
+                <tr>
+                    <td> <label align="center">Change</label></td>
+                    <td> <p id="changeID" align="center">0</p></td>
+                </tr>
+        </table></td>
+    </tr>
+</table>
+</body>
+</html>
