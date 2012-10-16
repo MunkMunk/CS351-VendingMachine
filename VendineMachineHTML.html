@@ -124,6 +124,11 @@
                 <td> <button onclick="setNumeral('9')"> 9</button> </td>
                 <td> <button onclick="setNumeral('0')"> 0</button> </td>
             </tr>
+            <!-- row 6 -->
+            <tr>
+                <td><label id="alpha">-</label></td>
+                <td><label id="numeral">-</label></td>
+            </tr>
         </table></td>
     </tr>
     <tr>
@@ -138,22 +143,34 @@
         </table></td>
         <td><table border="1">
                 <tr>
-                    <td> <button onclick="setAlpha('');setNumeral('')"> Clear</button></td>
-                    <td> <button onclick="vend()"> Vend</button></td> 
+                    <td><button onclick="setAlpha('-');setNumeral('-')"> Clear</button></td>
+                    <td><button onclick="vend()"> Vend</button></td>
+                    <td><button onclick ="sendOrder()">ReOrder</button></td>
                 </tr>
                 <tr>
                     <td><label align="center">MoneyInput</label></td>
                     <td> <p id="moneyID" align="center">0</p></td>
+                    <td><table>
+                        <tr>
+                            <td><label>Total Profit</label></td>
+                        </tr>
+                        <tr>
+                            <td><label id="profit">0.00</label></td>
+                        </tr>
+                    </table></td>
                 </tr>
                 <tr>
                     <td> <label align="center">Change</label></td>
                     <td> <p id="changeID" align="center">0</p></td>
-                    <td> <p id="changeP">pennies : 0</p></td>
-                    <td> <p id="changeN">nickels : 0</p></td>
-                    <td> <p id="changeD">dimes : 0</p></td>
-                    <td> <p id="changeQ">quarters : 0</p></td>
+                    <td> <p id="changeP">pennies <br> 0</p></td>
+                    <td> <p id="changeN">nickels <br> 0</p></td>
+                    <td> <p id="changeD">dimes <br> 0</p></td>
+                    <td> <p id="changeQ">quarters <br> 0</p></td>
                 </tr>
         </table></td>
+    </tr>
+    <tr>
+        <td><textarea id="output" width="800"></textarea></td>
     </tr>
 </table>
 <script>initializeMachine();</script>
