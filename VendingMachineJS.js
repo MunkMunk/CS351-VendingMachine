@@ -10,18 +10,20 @@ var productArrayC = new Array();
 var productArrayD = new Array();
 var productArrayE = new Array();
 
+var date = new Date();
+
 function initializeMachine() {
 
-    productArrayA[0] = new productObject('Coke', 'a1', 1.25, maxQuantity);
-    productArrayA[1] = new productObject('Pepsi', 'a2', 1.25, maxQuantity);
-    productArrayA[2] = new productObject('DrPepper', 'a3', 1.25, maxQuantity);
-    productArrayA[3] = new productObject('Diet Coke', 'a4', 1.25, maxQuantity);
-    productArrayA[4] = new productObject('Diet DrPepper', 'a5', 1.25, maxQuantity);
-    productArrayA[5] = new productObject('Sprite', 'a6', 1.25, maxQuantity);
-    productArrayA[6] = new productObject('Sierra Mist', 'a7', 1.25, maxQuantity);
-    productArrayA[7] = new productObject('Gatorade', 'a8', 1.50, maxQuantity);
-    productArrayA[8] = new productObject('Powerade', 'a9', 1.50, maxQuantity);
-    productArrayA[9] = new productObject('Bottled Water', 'a0', 1.00, maxQuantity);
+    productArrayA[0] = new productObject('Coke', 'a1', 1.25, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[1] = new productObject('Pepsi', 'a2', 1.25, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[2] = new productObject('DrPepper', 'a3', 1.25, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[3] = new productObject('Diet Coke', 'a4', 1.25, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[4] = new productObject('Diet DrPepper', 'a5', 1.25, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[5] = new productObject('Sprite', 'a6', 1.25, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[6] = new productObject('Sierra Mist', 'a7', 1.25, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[7] = new productObject('Gatorade', 'a8', 1.50, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[8] = new productObject('Powerade', 'a9', 1.50, maxQuantity, new Date(2013, 10, 25));
+    productArrayA[9] = new productObject('Bottled Water', 'a0', 1.00, maxQuantity, new Date(2013, 10, 25));
     
     document.getElementById("a1").innerHTML = productArrayA[0].name + ' $' + productArrayA[0].price.toFixed(2);
     document.getElementById("a2").innerHTML = productArrayA[1].name + ' $' + productArrayA[1].price.toFixed(2);
@@ -34,16 +36,16 @@ function initializeMachine() {
     document.getElementById("a9").innerHTML = productArrayA[8].name + ' $' + productArrayA[8].price.toFixed(2);
     document.getElementById("a0").innerHTML = productArrayA[9].name + ' $' + productArrayA[9].price.toFixed(2);
 
-    productArrayB[0] = new productObject('100Grand', 'b1', 1.00, maxQuantity);
-    productArrayB[1] = new productObject('Snickers', 'b2', 1.00, maxQuantity);
-    productArrayB[2] = new productObject('Twix', 'b3', 1.00, maxQuantity);
-    productArrayB[3] = new productObject('Kit-Kat', 'b4', 1.00, maxQuantity);
-    productArrayB[4] = new productObject('M&Ms', 'b5', 1.00, maxQuantity);
-    productArrayB[5] = new productObject('BabyRuth', 'b6', 1.00, maxQuantity);
-    productArrayB[6] = new productObject('PayDay', 'b7', 1.00, maxQuantity);
-    productArrayB[7] = new productObject('MilkyWay', 'b8', 1.00, maxQuantity);
-    productArrayB[8] = new productObject('Reese\'s', 'b9', 1.00, maxQuantity);
-    productArrayB[9] = new productObject('Butterfinger', 'b0', 1.00, maxQuantity);
+    productArrayB[0] = new productObject('100Grand', 'b1', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[1] = new productObject('Snickers', 'b2', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[2] = new productObject('Twix', 'b3', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[3] = new productObject('Kit-Kat', 'b4', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[4] = new productObject('M&Ms', 'b5', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[5] = new productObject('BabyRuth', 'b6', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[6] = new productObject('PayDay', 'b7', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[7] = new productObject('MilkyWay', 'b8', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[8] = new productObject('Reese\'s', 'b9', 1.00, maxQuantity, new Date(2013, 10, 25));
+    productArrayB[9] = new productObject('Butterfinger', 'b0', 1.00, maxQuantity, new Date(2013, 10, 25));
     
     document.getElementById("b1").innerHTML = productArrayB[0].name + ' $' + productArrayB[0].price.toFixed(2);
     document.getElementById("b2").innerHTML = productArrayB[1].name + ' $' + productArrayB[1].price.toFixed(2);
@@ -56,20 +58,17 @@ function initializeMachine() {
     document.getElementById("b9").innerHTML = productArrayB[8].name + ' $' + productArrayB[8].price.toFixed(2);
     document.getElementById("b0").innerHTML = productArrayB[9].name + ' $' + productArrayB[9].price.toFixed(2);
     
-    alert('C products');
+    productArrayC[0] = new productObject('Short Sword', 'c1', 100, 3, new Date(1470, 10, 25));
+    productArrayC[1] = new productObject('Long Sword', 'c2', 150, 3, new Date(2013, 10, 25));
+    productArrayC[2] = new productObject('Bastard Sword', 'c3', 200, 2, new Date(2013, 10, 25));
+    productArrayC[3] = new productObject('Claymore', 'c4', 200, 2, new Date(2013, 10, 25));
+    productArrayC[4] = new productObject('Wakizashi', 'c5', 75, 5, new Date(2013, 10, 25));
+    productArrayC[5] = new productObject('Katana', 'c6', 100, 3, new Date(2013, 10, 25));
+    productArrayC[6] = new productObject('Flail', 'c7', 100, 3, new Date(2013, 10, 25));
+    productArrayC[7] = new productObject('Morningstar', 'c8', 100, 3, new Date(2013, 10, 25));
+    productArrayC[8] = new productObject('Hammer', 'c9', 15, 10, new Date(2013, 10, 25));
+    productArrayC[9] = new productObject('Toothpick', 'c0', .15, 1000, new Date(2013, 10, 25));
     
-    productArrayC[0] = new productObject('Short Sword', 'c1', 100, 3);
-    productArrayC[1] = new productObject('Long Sword', 'c2', 150, 3);
-    productArrayC[2] = new productObject('Bastard Sword', 'c3', 200, 2);
-    productArrayC[3] = new productObject('Claymore', 'c4', 200, 2);
-    productArrayC[4] = new productObject('Wakizashi', 'c5', 75, 5);
-    productArrayC[5] = new productObject('Katana', 'c6', 100, 3);
-    productArrayC[6] = new productObject('Flail', 'c7', 100, 3);
-    productArrayC[7] = new productObject('Morningstar', 'c8', 100, 3);
-    productArrayC[8] = new productObject('Hammer', 'c9', 15, 10);
-    productArrayC[9] = new productObject('Toothpick', 'c0', .15, 1000);
-    
-    alert('Displaying C products');
     document.getElementById("c1").innerHTML = productArrayC[0].name + ' $' + productArrayC[0].price.toFixed(2);
     document.getElementById("c2").innerHTML = productArrayC[1].name + ' $' + productArrayC[1].price.toFixed(2);
     document.getElementById("c3").innerHTML = productArrayC[2].name + ' $' + productArrayC[2].price.toFixed(2);
@@ -109,7 +108,8 @@ function vend() {
         alert('No Vend : please make correct selection');
     } else {
         if (keypadAlpha == 'A') {
-            if (productArrayA[i].quantity >= 1 && money >= productArrayA[i].price) {
+            if (productArrayA[i].quantity >= 1 && money >= productArrayA[i].price && productArrayA[i].expiration > date) {
+                alert('Vending : ' + productArrayA[i].name);
                 productArrayA[i].order += 1;
                 productArrayA[i].quantity -= 1;
                 document.getElementById("output").innerHTML += "Vending " + productArrayA[i].name + "\n";
@@ -117,12 +117,16 @@ function vend() {
                 document.getElementById("profit").innerHTML = totalProfits.toFixed(2);
             }
             else {
+                if (productArrayA[i].quantity >= 1 && money >= productArrayA[i].price && productArrayA[i].expiration < date) {
+                    alert('Product is Expired : no vend');
+                }
                 if (productArrayA[i].quantity == 0) { alert('Sold Out'); }
                 if (money < productArrayA[i].price) { alert('No Vend : Please insert currency'); }
             }
         }
         else if (keypadAlpha == 'B') {
-            if (productArrayB[i].quantity >= 1 && money >= productArrayB[i].price) {
+            if (productArrayB[i].quantity >= 1 && money >= productArrayB[i].price && productArrayB[i] > date) {
+                alert('Vending : ' + productArrayB[i].name);
                 productArrayB[i].order += 1;
                 productArrayB[i].quantity -= 1;
                 document.getElementById("output").innerHTML += "Vending " + productArrayB[i].name + "\n";
@@ -130,12 +134,29 @@ function vend() {
                 document.getElementById("profit").innerHTML = totalProfits.toFixed(2);
             }
             else {
+                if (productArrayA[i].quantity >= 1 && money >= productArrayA[i].price && productArrayA[i].expiration < date) {
+                    alert('Product is Expired : no vend');
+                }
                 if (productArrayB[i].quantity == 0) { alert('Sold Out'); }
                 if (money < productArrayB[i].price) { alert('No Vend : Please insert currency'); }
             }
         }
         else if (keypadAlpha == 'C') {
-            
+            if (productArrayC[i].quantity >= 1 && money >= productArrayC[i].price && productArrayC[i].expiration > date) {
+                alert('Vending : ' + productArrayC[i].name);  
+                productArrayC[i].order += 1;
+                productArrayC[i].quantity -= 1;
+                document.getElementById("output").innerHTML += "Vending " + productArrayC[i].name + "\n";
+                makeChange(productArrayC[i].price);
+                document.getElementById("profit").innerHTML = totalProfits.toFixed(2);
+            }
+            else {
+                if (productArrayC[i].quantity >= 1 && money >= productArrayC[i].price && productArrayC[i].expiration < date) {
+                    alert('Product is Expired on ' + productArrayC[i].expiration + ' : no vend');
+                }
+                if (productArrayC[i].quantity == 0) { alert('Sold Out'); }
+                if (money < productArrayC[i].price) { alert('No Vend : Please insert currency'); }
+            }
         }
         else if (keypadAlpha == 'D') {
             
@@ -268,12 +289,13 @@ function makeChange(c) {
     
 }
 
-function productObject (n, ID, p, q) {
+function productObject (n, ID, p, q, e) {
     this.name = n;
     this.vendorID = ID;
     this.price = p;
     this.quantity = q;
     this.order = 0;
+    this.expiration = e;
     
     //put functions here
     // this.FunctionName = function() { }
