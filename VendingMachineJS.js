@@ -1,5 +1,9 @@
 var maxQuantity = 25;
 
+var money = 0;
+
+var totalProfits = 0;
+
 var productArrayA = new Array();
 var productArrayB = new Array();
 var productArrayC = new Array();
@@ -19,16 +23,16 @@ function initializeMachine() {
     productArrayA[8] = new productObject('Powerade', 'a9', 1.50, maxQuantity);
     productArrayA[9] = new productObject('Bottled Water', 'a0', 1.00, maxQuantity);
     
-    document.getElementById("a1").innerHTML = productArrayA[0].name + ' ' + productArrayA[0].price.toFixed(2);
-    document.getElementById("a2").innerHTML = productArrayA[1].name + ' ' + productArrayA[1].price.toFixed(2);
-    document.getElementById("a3").innerHTML = productArrayA[2].name + ' ' + productArrayA[2].price.toFixed(2);
-    document.getElementById("a4").innerHTML = productArrayA[3].name + ' ' + productArrayA[3].price.toFixed(2);
-    document.getElementById("a5").innerHTML = productArrayA[4].name + ' ' + productArrayA[4].price.toFixed(2);
-    document.getElementById("a6").innerHTML = productArrayA[5].name + ' ' + productArrayA[5].price.toFixed(2);
-    document.getElementById("a7").innerHTML = productArrayA[6].name + ' ' + productArrayA[6].price.toFixed(2);
-    document.getElementById("a8").innerHTML = productArrayA[7].name + ' ' + productArrayA[7].price.toFixed(2);
-    document.getElementById("a9").innerHTML = productArrayA[8].name + ' ' + productArrayA[8].price.toFixed(2);
-    document.getElementById("a0").innerHTML = productArrayA[9].name + ' ' + productArrayA[9].price.toFixed(2);
+    document.getElementById("a1").innerHTML = productArrayA[0].name + ' $' + productArrayA[0].price.toFixed(2);
+    document.getElementById("a2").innerHTML = productArrayA[1].name + ' $' + productArrayA[1].price.toFixed(2);
+    document.getElementById("a3").innerHTML = productArrayA[2].name + ' $' + productArrayA[2].price.toFixed(2);
+    document.getElementById("a4").innerHTML = productArrayA[3].name + ' $' + productArrayA[3].price.toFixed(2);
+    document.getElementById("a5").innerHTML = productArrayA[4].name + ' $' + productArrayA[4].price.toFixed(2);
+    document.getElementById("a6").innerHTML = productArrayA[5].name + ' $' + productArrayA[5].price.toFixed(2);
+    document.getElementById("a7").innerHTML = productArrayA[6].name + ' $' + productArrayA[6].price.toFixed(2);
+    document.getElementById("a8").innerHTML = productArrayA[7].name + ' $' + productArrayA[7].price.toFixed(2);
+    document.getElementById("a9").innerHTML = productArrayA[8].name + ' $' + productArrayA[8].price.toFixed(2);
+    document.getElementById("a0").innerHTML = productArrayA[9].name + ' $' + productArrayA[9].price.toFixed(2);
 
     productArrayB[0] = new productObject('100Grand', 'b1', 1.00, maxQuantity);
     productArrayB[1] = new productObject('Snickers', 'b2', 1.00, maxQuantity);
@@ -41,16 +45,42 @@ function initializeMachine() {
     productArrayB[8] = new productObject('Reese\'s', 'b9', 1.00, maxQuantity);
     productArrayB[9] = new productObject('Butterfinger', 'b0', 1.00, maxQuantity);
     
-    document.getElementById("b1").innerHTML = productArrayB[0].name + ' ' + productArrayB[0].price.toFixed(2);
-    document.getElementById("b2").innerHTML = productArrayB[1].name + ' ' + productArrayB[1].price.toFixed(2);
-    document.getElementById("b3").innerHTML = productArrayB[2].name + ' ' + productArrayB[2].price.toFixed(2);
-    document.getElementById("b4").innerHTML = productArrayB[3].name + ' ' + productArrayB[3].price.toFixed(2);
-    document.getElementById("b5").innerHTML = productArrayB[4].name + ' ' + productArrayB[4].price.toFixed(2);
-    document.getElementById("b6").innerHTML = productArrayB[5].name + ' ' + productArrayB[5].price.toFixed(2);
-    document.getElementById("b7").innerHTML = productArrayB[6].name + ' ' + productArrayB[6].price.toFixed(2);
-    document.getElementById("b8").innerHTML = productArrayB[7].name + ' ' + productArrayB[7].price.toFixed(2);
-    document.getElementById("b9").innerHTML = productArrayB[8].name + ' ' + productArrayB[8].price.toFixed(2);
-    document.getElementById("b0").innerHTML = productArrayB[9].name + ' ' + productArrayB[9].price.toFixed(2);
+    document.getElementById("b1").innerHTML = productArrayB[0].name + ' $' + productArrayB[0].price.toFixed(2);
+    document.getElementById("b2").innerHTML = productArrayB[1].name + ' $' + productArrayB[1].price.toFixed(2);
+    document.getElementById("b3").innerHTML = productArrayB[2].name + ' $' + productArrayB[2].price.toFixed(2);
+    document.getElementById("b4").innerHTML = productArrayB[3].name + ' $' + productArrayB[3].price.toFixed(2);
+    document.getElementById("b5").innerHTML = productArrayB[4].name + ' $' + productArrayB[4].price.toFixed(2);
+    document.getElementById("b6").innerHTML = productArrayB[5].name + ' $' + productArrayB[5].price.toFixed(2);
+    document.getElementById("b7").innerHTML = productArrayB[6].name + ' $' + productArrayB[6].price.toFixed(2);
+    document.getElementById("b8").innerHTML = productArrayB[7].name + ' $' + productArrayB[7].price.toFixed(2);
+    document.getElementById("b9").innerHTML = productArrayB[8].name + ' $' + productArrayB[8].price.toFixed(2);
+    document.getElementById("b0").innerHTML = productArrayB[9].name + ' $' + productArrayB[9].price.toFixed(2);
+    
+    alert('C products');
+    
+    productArrayC[0] = new productObject('Short Sword', 'c1', 100, 3);
+    productArrayC[1] = new productObject('Long Sword', 'c2', 150, 3);
+    productArrayC[2] = new productObject('Bastard Sword', 'c3', 200, 2);
+    productArrayC[3] = new productObject('Claymore', 'c4', 200, 2);
+    productArrayC[4] = new productObject('Wakizashi', 'c5', 75, 5);
+    productArrayC[5] = new productObject('Katana', 'c6', 100, 3);
+    productArrayC[6] = new productObject('Flail', 'c7', 100, 3);
+    productArrayC[7] = new productObject('Morningstar', 'c8', 100, 3);
+    productArrayC[8] = new productObject('Hammer', 'c9', 15, 10);
+    productArrayC[9] = new productObject('Toothpick', 'c0', .15, 1000);
+    
+    alert('Displaying C products');
+    document.getElementById("c1").innerHTML = productArrayC[0].name + ' $' + productArrayC[0].price.toFixed(2);
+    document.getElementById("c2").innerHTML = productArrayC[1].name + ' $' + productArrayC[1].price.toFixed(2);
+    document.getElementById("c3").innerHTML = productArrayC[2].name + ' $' + productArrayC[2].price.toFixed(2);
+    document.getElementById("c4").innerHTML = productArrayC[3].name + ' $' + productArrayC[3].price.toFixed(2);
+    document.getElementById("c5").innerHTML = productArrayC[4].name + ' $' + productArrayC[4].price.toFixed(2);
+    document.getElementById("c6").innerHTML = productArrayC[5].name + ' $' + productArrayC[5].price.toFixed(2);
+    document.getElementById("c7").innerHTML = productArrayC[6].name + ' $' + productArrayC[6].price.toFixed(2);
+    document.getElementById("c8").innerHTML = productArrayC[7].name + ' $' + productArrayC[7].price.toFixed(2);
+    document.getElementById("c9").innerHTML = productArrayC[8].name + ' $' + productArrayC[8].price.toFixed(2);
+    document.getElementById("c0").innerHTML = productArrayC[9].name + ' $' + productArrayC[9].price.toFixed(2);
+
 }
 
 var keypadAlpha = '-';
@@ -80,7 +110,6 @@ function vend() {
     } else {
         if (keypadAlpha == 'A') {
             if (productArrayA[i].quantity >= 1 && money >= productArrayA[i].price) {
-                
                 productArrayA[i].order += 1;
                 productArrayA[i].quantity -= 1;
                 document.getElementById("output").innerHTML += "Vending " + productArrayA[i].name + "\n";
@@ -88,7 +117,8 @@ function vend() {
                 document.getElementById("profit").innerHTML = totalProfits.toFixed(2);
             }
             else {
-                alert('No Vend : Please insert currency')
+                if (productArrayA[i].quantity == 0) { alert('Sold Out'); }
+                if (money < productArrayA[i].price) { alert('No Vend : Please insert currency'); }
             }
         }
         else if (keypadAlpha == 'B') {
@@ -100,7 +130,8 @@ function vend() {
                 document.getElementById("profit").innerHTML = totalProfits.toFixed(2);
             }
             else {
-                alert('No Vend : Please insert currency')
+                if (productArrayB[i].quantity == 0) { alert('Sold Out'); }
+                if (money < productArrayB[i].price) { alert('No Vend : Please insert currency'); }
             }
         }
         else if (keypadAlpha == 'C') {
@@ -118,34 +149,40 @@ function vend() {
 function sendOrder(){
     for (var i = 0; i < 10; i++) {
         if (productArrayA[i] != null){
-        productArrayA[i].reOrder();
+            if (productArrayA[i].order > 0) {
+                productArrayA[i].reOrder();
+            }
         }
     }
     for (var i = 0; i < 10; i++) {
         if (productArrayB[i] != null){
-        productArrayB[i].reOrder();
+            if (productArrayB[i].order > 0) {
+                productArrayB[i].reOrder();
+            }
         }
     }
     for (var i = 0; i < 10; i++) {
         if (productArrayC[i] != null){
-        productArrayC[i].reOrder();
+            if (productArrayC[i].order > 0) {
+                productArrayC[i].reOrder();
+            }
         }
     }
     for (var i = 0; i < 10; i++) {
         if (productArrayD[i] != null){
-        productArrayD[i].reOrder();
+            if (productArrayD[i].order > 0) {
+                productArrayD[i].reOrder();
+            }
         }
     }
     for (var i = 0; i < 10; i++) {
         if (productArrayE[i] != null){
-        productArrayE[i].reOrder();
+            if (productArrayE[i].order > 0) {
+                productArrayE[i].reOrder();
+            }
         }
     }
 }
-
-var money = 0;
-
-var totalProfits = 0;
 
 function addMoney(m) {
     if (m == 'penny') {
@@ -163,6 +200,30 @@ function addMoney(m) {
     else if (m == 'dollar') {
         money += 1.00;
     }
+    else if (m == 'Bpenny') {
+        money += .01 * 1.6;
+    }
+    else if (m == '2pence') {
+        money += .02 * 1.6;
+    }
+    else if (m == '5pence') {
+        money += .05 * 1.6;
+    }
+    else if (m == '10pence') {
+        money += .1 * 1.6;
+    }
+    else if (m == '20pence') {
+        money += .2 * 1.6;
+    }
+    else if (m == '50pence') {
+        money += .5 * 1.6;
+    }
+    else if (m == '1pound') {
+        money += 1.00 * 1.6;
+    }
+    else if (m == '2pound') {
+        money += 2.00 * 1.6;
+    }
     
     document.getElementById("moneyID").innerHTML = money.toFixed(2);
     
@@ -177,34 +238,33 @@ function makeChange(c) {
     var change = money - c;
 
     totalProfits += c;
-
-    document.getElementById("changeID").innerHTML= change.toFixed(2);
     
     while(change >= .01) {
         if (change >= .25) {
             quarters++;
             change -= .25;
-            document.getElementById("changeQ").innerHTML = quarters + ' quarters';
         }
         else if (change >= .1) {
             dimes++;
             change -= .1;
-            document.getElementById("changeD").innerHTML = dimes + ' dimes';
         }
         else if (change >= .05) {
             nickels++;
             change -= .05;
-            document.getElementById("changeN").innerHTML = nickels + ' nickels';
         }
         else if (change >= .01) {
             pennies++;
             change -= .01;
-            document.getElementById("changeP").innerHTML = pennies + ' pennies';
         }
     }
     
     money = 0;
     document.getElementById("moneyID").innerHTML= money.toFixed(2);
+    document.getElementById("changeID").innerHTML= change.toFixed(2);
+    document.getElementById("changeQ").innerHTML = quarters + ' quarters';
+    document.getElementById("changeD").innerHTML = dimes + ' dimes';
+    document.getElementById("changeN").innerHTML = nickels + ' nickels';
+    document.getElementById("changeP").innerHTML = pennies + ' pennies';
     
 }
 
@@ -222,7 +282,6 @@ function productObject (n, ID, p, q) {
         this.quantity += this.order;
         this.order = 0;
     }
-    
 }
 
 

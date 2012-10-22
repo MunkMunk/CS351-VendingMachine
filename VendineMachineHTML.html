@@ -129,22 +129,48 @@
                 <td><label id="alpha">-</label></td>
                 <td><label id="numeral">-</label></td>
             </tr>
+            <tr>
+                <td><button onclick="setAlpha('-');setNumeral('-');makeChange(0)"> Clear</button></td>
+                <td><button onclick="vend()"> Vend</button></td>
+            </tr>
         </table></td>
     </tr>
     <tr>
-        <td><table width="400" border="1">
-            <tr>
-                <td><button onclick="addMoney('penny')"><img src="penny.jpg"></img></button></td>
-                <td><button onclick="addMoney('nickel')"><img src="nickel.jpg"></jpg></button></td>
-                <td><button onclick="addMoney('dime')"><img src="dime.jpg"></img></button></td>
-                <td><button onclick="addMoney('quarter')"><img src="quarter.jpg"></img></button></td>
-                <td><button onclick="addMoney('dollar')"><img src="dollar.jpg"></img></button></td>
-            </tr>
+        <!-- Currencies -->
+        <td><table>
+        <tr>
+            <!-- USD -->
+            <td><table width="400" border="1">
+                <tr>
+                    <td><label>US Dollars</label></td>
+                    <td><button onclick="addMoney('penny')"><img src="penny.jpg"></img></button></td>
+                    <td><button onclick="addMoney('nickel')"><img src="nickel.jpg"></jpg></button></td>
+                    <td><button onclick="addMoney('dime')"><img src="dime.jpg"></img></button></td>
+                    <td><button onclick="addMoney('quarter')"><img src="quarter.jpg"></img></button></td>
+                    <td><button onclick="addMoney('dollar')"><img src="dollar.jpg"></img></button></td>
+                </tr>
+            </table></td>
+        </tr>
+        <tr>
+            <!-- British Sterling -->
+            <td><table border="1">
+                <tr>
+                    <td><label>British Sterling</label></td>
+                    <td><button onclick="addMoney('Bpenny')"><img src="onepenny.jpg"></img></button></td>
+                    <td><button onclick="addMoney('2pence')"><img src="twopence.jpg"></img></button></td>
+                    <td><button onclick="addMoney('5pence')"><img src="fivepence.jpg"></img></button></td>
+                    <td><button onclick="addMoney('10pence')"><img src="tenpence.jpg"></img></button></td>
+                    <td><button onclick="addMoney('20pence')"><img src="twentypence.jpg"></img></button></td>
+                    <td><button onclick="addMoney('50pence')"><img src="fiftypence.jpg"></img></button></td>
+                    <td><button onclick="addMoney('1pound')"><img src="onepound.jpg"></img></button></td>
+                    <td><button onclick="addMoney('2pound')"><img src="twopound.jpg"></img></button></td>
+                </tr>
+             </table></td>
+        </tr>
         </table></td>
+        <!-- End Currencies -->    
         <td><table border="1">
                 <tr>
-                    <td><button onclick="setAlpha('-');setNumeral('-')"> Clear</button></td>
-                    <td><button onclick="vend()"> Vend</button></td>
                     <td><button onclick ="sendOrder()">ReOrder</button></td>
                 </tr>
                 <tr>
@@ -169,6 +195,7 @@
                 </tr>
         </table></td>
     </tr>
+
     <tr>
         <td><textarea id="output" rows="15" cols="80"></textarea></td>
     </tr>
