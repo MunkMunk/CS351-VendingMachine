@@ -72,24 +72,36 @@ function vend() {
         i = 9;
     }
     if (keypadAlpha == '-' && keypadNumeral == '-') {
-        alert('no vend');
-    } else if (keypadAlpha == '') {
-        alert('no vend');
-    } else if (keypadNumeral == '') {
-        alert('no vend');
+        alert('No Vend : please make correct selection');
+    } else if (keypadAlpha == '-') {
+        alert('No Vend : please make correct selection');
+    } else if (keypadNumeral == '-') {
+        alert('No Vend : please make correct selection');
     } else {
         if (keypadAlpha == 'A') {
             if (productArrayA[i].quantity >= 1 && money >= productArrayA[i].price) {
                 
                 productArrayA[i].order += 1;
                 productArrayA[i].quantity -= 1;
-                document.write("vending a" + productArrayA[i].name);
+                document.getElementById("output").innerHTML += "Vending " + productArrayA[i].name + "\n";
                 makeChange(productArrayA[i].price);
+                document.getElementById("profit").innerHTML = totalProfits.toFixed(2);
             }
-            
+            else {
+                alert('No Vend : Please insert currency')
+            }
         }
         else if (keypadAlpha == 'B') {
-            
+            if (productArrayB[i].quantity >= 1 && money >= productArrayB[i].price) {
+                productArrayB[i].order += 1;
+                productArrayB[i].quantity -= 1;
+                document.getElementById("output").innerHTML += "Vending " + productArrayB[i].name + "\n";
+                makeChange(productArrayB[i].price);
+                document.getElementById("profit").innerHTML = totalProfits.toFixed(2);
+            }
+            else {
+                alert('No Vend : Please insert currency')
+            }
         }
         else if (keypadAlpha == 'C') {
             
@@ -105,11 +117,29 @@ function vend() {
 
 function sendOrder(){
     for (var i = 0; i < 10; i++) {
-        productArrayA[i].reOrder;
-        productArrayB[i].reOrder;
-        productArrayC[i].reOrder;
-        productArrayD[i].reOrder;
-        productArrayE[i].reOrder;
+        if (productArrayA[i] != null){
+        productArrayA[i].reOrder();
+        }
+    }
+    for (var i = 0; i < 10; i++) {
+        if (productArrayB[i] != null){
+        productArrayB[i].reOrder();
+        }
+    }
+    for (var i = 0; i < 10; i++) {
+        if (productArrayC[i] != null){
+        productArrayC[i].reOrder();
+        }
+    }
+    for (var i = 0; i < 10; i++) {
+        if (productArrayD[i] != null){
+        productArrayD[i].reOrder();
+        }
+    }
+    for (var i = 0; i < 10; i++) {
+        if (productArrayE[i] != null){
+        productArrayE[i].reOrder();
+        }
     }
 }
 
@@ -133,7 +163,6 @@ function addMoney(m) {
     else if (m == 'dollar') {
         money += 1.00;
     }
-    //alert(money.toString());
     
     document.getElementById("moneyID").innerHTML = money.toFixed(2);
     
@@ -151,33 +180,28 @@ function makeChange(c) {
 
     document.getElementById("changeID").innerHTML= change.toFixed(2);
     
-    while(change > .01) {
+    while(change >= .01) {
         if (change >= .25) {
             quarters++;
             change -= .25;
-            document.getElementById("changeQ").innerHTML = 'quarters : ' + quarters;
+            document.getElementById("changeQ").innerHTML = quarters + ' quarters';
         }
         else if (change >= .1) {
             dimes++;
             change -= .1;
-            document.getElementById("changeD").innerHTML = 'dimes : ' + dimes;
+            document.getElementById("changeD").innerHTML = dimes + ' dimes';
         }
         else if (change >= .05) {
             nickels++;
             change -= .05;
-            document.getElementById("changeN").innerHTML = 'nickels : ' + nickels;
+            document.getElementById("changeN").innerHTML = nickels + ' nickels';
         }
         else if (change >= .01) {
             pennies++;
             change -= .01;
-            document.getElementById("changeP").innerHTML = 'pennies :' + pennies;
+            document.getElementById("changeP").innerHTML = pennies + ' pennies';
         }
     }
-    
-    //document.getElementById("changeP").innerHTML = 'pennies :' + pennies;
-    //document.getElementById("changeN").innerHTML = 'nickels : ' + nickels;
-    //document.getElementById("changeD").innerHTML = 'dimes : ' + dimes;
-    //document.getElementById("changeQ").innerHTML = 'quarters : ' + quarters;
     
     money = 0;
     document.getElementById("moneyID").innerHTML= money.toFixed(2);
@@ -193,8 +217,8 @@ function productObject (n, ID, p, q) {
     
     //put functions here
     // this.FunctionName = function() { }
-    this.reOrder = function() {
-        document.write('ReOrdering ' + this.name + ' x ' + this.order);
+    this.reOrder = function reOrder() {
+        document.getElementById("output").innerHTML += "ReOrdering " + this.order + " " + this.name + "\n";
         this.quantity += this.order;
         this.order = 0;
     }
