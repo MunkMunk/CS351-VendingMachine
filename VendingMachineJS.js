@@ -1,4 +1,4 @@
-var maxQuantity = 25;
+var maxQuantity = 5;
 
 var money = 0;
 
