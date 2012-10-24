@@ -1,3 +1,5 @@
+// Author: Kellen Zelle
+
 var maxQuantity = 5;
 
 var money = 0;
@@ -12,6 +14,7 @@ var productArrayE = new Array();
 
 var date = new Date();
 
+// Initializes the Machine's product arrays
 function initializeMachine() {
 
     productArrayA[0] = new productObject('Coke', 'a1', 1.25, maxQuantity, new Date(2013, 10, 25));
@@ -85,16 +88,21 @@ function initializeMachine() {
 var keypadAlpha = '-';
 var keypadNumeral = '-';
 
+// Function to set the Letter variable of the code
 function setAlpha(alpha) {
     keypadAlpha = alpha;
     document.getElementById("alpha").innerHTML = alpha;
 }
 
+// Function to set the Numeric variable of the code
 function setNumeral(numeral) {
     keypadNumeral = numeral;
     document.getElementById("numeral").innerHTML = numeral;
 }
 
+// Function that vends a certain product depending on the Alpha and Numeric code
+// Checks to see if a selection is made, if there is enough money to vend the chosen product,
+// and if the product is expired.
 function vend() {
     var i = keypadNumeral - 1;
     if (keypadNumeral == 0) {
@@ -167,6 +175,8 @@ function vend() {
     }
 }
 
+// A function that calls all of the reorder functions in each product if a product
+// has been purchased
 function sendOrder(){
     for (var i = 0; i < 10; i++) {
         if (productArrayA[i] != null){
@@ -205,6 +215,8 @@ function sendOrder(){
     }
 }
 
+// function that adds money to the current available amount
+// to vend from
 function addMoney(m) {
     if (m == 'penny') {
         money += .01;
@@ -250,6 +262,7 @@ function addMoney(m) {
     
 }
 
+// function that returns change to the 'user' using a typical make change algorithm
 function makeChange(c) {
     
     var pennies = 0;
@@ -289,6 +302,7 @@ function makeChange(c) {
     
 }
 
+// Product Object; variable names explain what they are.
 function productObject (n, ID, p, q, e) {
     this.name = n;
     this.vendorID = ID;
@@ -296,9 +310,8 @@ function productObject (n, ID, p, q, e) {
     this.quantity = q;
     this.order = 0;
     this.expiration = e;
-    
-    //put functions here
-    // this.FunctionName = function() { }
+
+    // the reorder function that displays the reorder amount of the product, and restocks the amount.
     this.reOrder = function reOrder() {
         document.getElementById("output").innerHTML += "ReOrdering " + this.order + " " + this.name + "\n";
         this.quantity += this.order;

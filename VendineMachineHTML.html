@@ -65,35 +65,8 @@
             <td><label id="c9"></label></td>
             <td><label id="c0"></label></td>
         </tr>
-        <!-- 
-        <tr>
-            <td><label>D</label></td>
-            <td><label id="d1"></label></td>
-            <td><label id="d2"></label></td>
-            <td><label id="d3"></label></td>
-            <td><label id="d4"></label></td>
-            <td><label id="d5"></label></td>
-            <td><label id="d6"></label></td>
-            <td><label id="d7"></label></td>
-            <td><label id="d8"></label></td>
-            <td><label id="d9"></label></td>
-            <td><label id="d0"></label></td>
-        </tr>
-        <tr>
-            <td><label>E</label></td>
-            <td><label id="e1"></label></td>
-            <td><label id="e2"></label></td>
-            <td><label id="e3"></label></td>
-            <td><label id="e4"></label></td>
-            <td><label id="e5"></label></td>
-            <td><label id="e6"></label></td>
-            <td><label id="e7"></label></td>
-            <td><label id="e8"></label></td>
-            <td><label id="e9"></label></td>
-            <td><label id="e0"></label></td>
-        </tr>
-        -->
         </table></td>
+        <!-- End Vendor Table -->
         <!-- keypad -->
         <td><table border="1">
             <!-- row 1  -->
@@ -136,6 +109,7 @@
                 <td><button onclick="vend();setAlpha('-');setNumeral('-')"> Vend</button></td>
             </tr>
         </table></td>
+        <!-- End Keypad table -->
     </tr>
     <tr>
         <!-- Currencies -->
@@ -152,6 +126,7 @@
                     <td><button onclick="addMoney('dollar')"><img src="dollar.jpg"></img></button></td>
                 </tr>
             </table></td>
+            <!-- End USD -->
         </tr>
         <tr>
             <!-- British Sterling -->
@@ -168,9 +143,12 @@
                     <td><button onclick="addMoney('2pound')"><img src="twopound.jpg"></img></button></td>
                 </tr>
              </table></td>
+            <!-- End British Sterling -->
         </tr>
         </table></td>
-        <!-- End Currencies -->    
+        <!-- End Currencies -->
+        
+        <!-- Misc Table -->
         <td><table border="1">
                 <tr>
                     <td><button onclick ="sendOrder()">ReOrder</button></td>
@@ -196,6 +174,7 @@
                     <td> <p id="changeQ">quarters</p></td>
                 </tr>
         </table></td>
+        <!-- End Misc Table -->
     </tr>
 
     <tr>
